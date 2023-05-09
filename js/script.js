@@ -14,3 +14,4 @@ const ctx = canvas.getContext('2d');
  ctxc.stroke();
  ctxc.fillStyle="green"
  ctxc.fill();
+ 
