@@ -1,37 +1,29 @@
-const canvas = document.getElementById('ret');
+const canvas = document.getElementById('canva');
 const ctx = canvas.getContext('2d');
- ctx.fillStyle="#2ACAEA";
- ctx.fillRect(0,0,250,400);
- ctx.fillStyle="#cff1c5";
- ctx.fillRect(250,0,250,400);
-
-var c = document.getElementById("circ");
-var ctxc = c.getContext('2d');
- ctxc.beginPath();
- ctxc.arc(250, 150, 140, 0, 2 * Math.PI);
- ctxc.lineWidth = 20;
- ctxc.strokeStyle="#3C0A51"
- ctxc.stroke();
- ctxc.fillStyle="#ea2aca"
- ctxc.fill();
-
-var cl = document.getElementById("lin");
-var ctxl = cl.getContext("2d");
-ctxl.lineWidth = 10;
-ctxl.moveTo(5, 10);
-ctxl.lineTo(450, 300);
-ctxl.stroke();
-
-var cv = document.getElementById("curv");
-var ctxv = cv.getContext("2d");
-ctxv.beginPath();
-ctxv.lineWidth = 10;
-ctxv.moveTo(0, 150);
-ctxv.quadraticCurveTo(250, 20, 500, 150);
-ctxv.stroke();
-
-var ci = document.getElementById("img");
-var ctxi = ci.getContext("2d");
 var img = document.getElementById("paint");
-ctxi.drawImage(img, 0, 0);
+ctx.fillStyle="#2ACAEA";
+ ctx.fillRect(0,0,175,200);
+ ctx.fillStyle="#cff1c5";
+ ctx.fillRect(175,0,175,200);
+
+ ctx.beginPath();
+ ctx.arc(600, 100, 70, 0, 2 * Math.PI);
+ ctx.lineWidth = 15;
+ ctx.strokeStyle="#3C0A51"
+ ctx.stroke();
+ ctx.fillStyle="#ea2aca"
+ ctx.fill();
+
+ctx.lineWidth = 10;
+ctx.moveTo(10, 250);
+ctx.lineTo(240, 400);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineWidth = 10;
+ctx.moveTo(500, 400);
+ctx.quadraticCurveTo(600, 240, 700, 400);
+ctx.stroke();
+
+ctx.drawImage(img, 300, 600);
  
