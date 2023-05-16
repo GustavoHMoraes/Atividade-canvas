@@ -1,6 +1,6 @@
+
 const canvas = document.getElementById('canva');
 const ctx = canvas.getContext('2d');
-var img = document.getElementById("paint");
 ctx.fillStyle="#2ACAEA";
  ctx.fillRect(0,0,175,200);
  ctx.fillStyle="#cff1c5";
@@ -25,5 +25,11 @@ ctx.moveTo(500, 400);
 ctx.quadraticCurveTo(600, 240, 700, 400);
 ctx.stroke();
 
-ctx.drawImage(img, 300, 600);
+var img=new Image();
+  img.onload=function(){
+  ctx.drawImage(this, 300, 600);
+  }
+  img.src = "img/paint.jpg"; 
+  
+
  
